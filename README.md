@@ -1,14 +1,14 @@
 # PostDemoJetPackCompose
 
 This App is Sample demo Project For Learning and Applying new Android Concepts.
+it  contains 2 Screen one for List of Posts and detail of each post.
 
-## Tech Stack
 
-This project uses uses compose and Hilt based on modern Android tech-stacks and MVVM architecture.
+it uses compose and Hilt based on modern Android tech-stacks and MVVM architecture.
 Fetching data from the network and integrating persisted data in the database via repository pattern.
 
 
-### Libraries
+### Libraries && Tech Stack
 
 - Application entirely written in [Kotlin](https://kotlinlang.org)
 - Asynchronous processing using [Coroutines](https://kotlin.github.io/kotlinx.coroutines/)
@@ -18,13 +18,15 @@ Fetching data from the network and integrating persisted data in the database vi
 - Uses [JetPackCompose] for UI .
 - Uses [Retrofit] For Networking.
 - Uses [Leak Canary] for Memory Leakage
-- TODO [Github Actions](https://docs.github.com/en/actions/learn-github-actions)
+- Apply Kotlin DSL in Gradle
 
 
 ### TODO
 - Add Ui Test For jetpackCompose
 - Improve the UI with compose Features with animation.
 - performance improvments.
+- [Github Actions](https://docs.github.com/en/actions/learn-github-actions)
+
 
 ## 📃 License
 
