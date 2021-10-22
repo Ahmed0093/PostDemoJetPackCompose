@@ -2,10 +2,10 @@ package com.example.postdemojetpackcompose.ui.theme.viewmodel
 
 import com.example.postdemojetpackcompose.cache.PostDao
 import com.example.postdemojetpackcompose.cache.PostDetailUIModel
+import com.example.postdemojetpackcompose.network.ApiResponseResult
+import com.example.postdemojetpackcompose.network.DataSourceResult
 import com.example.postdemojetpackcompose.network.NetworkRoute.makeApiCall
 import com.example.postdemojetpackcompose.network.PostsApi
-import com.example.postdemojetpackcompose.network.DataSourceResult
-import com.example.postdemojetpackcompose.network.ApiResponseResult
 import com.example.postdemojetpackcompose.network.model.UserCommentResponseItem
 import com.example.postdemojetpackcompose.network.model.UserPostResponseItem
 import com.example.postdemojetpackcompose.network.model.UserResponseItem

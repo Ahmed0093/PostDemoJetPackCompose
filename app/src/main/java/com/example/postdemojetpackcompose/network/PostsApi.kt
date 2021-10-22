@@ -1,6 +1,8 @@
 package com.example.postdemojetpackcompose.network
 
-import com.example.postdemojetpackcompose.network.model.*
+import com.example.postdemojetpackcompose.network.model.CommentsPostResponse
+import com.example.postdemojetpackcompose.network.model.UserPostResponseItem
+import com.example.postdemojetpackcompose.network.model.UserResponseItem
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -13,7 +15,7 @@ interface PostsApi {
     @GET("comments")
     suspend fun getUserCommentsByPostId(
         @Query("postId") postId: Int
-    ):Response< CommentsPostResponse>
+    ): Response<CommentsPostResponse>
 
     @GET("posts")
     suspend fun getUserPostsByUserId(

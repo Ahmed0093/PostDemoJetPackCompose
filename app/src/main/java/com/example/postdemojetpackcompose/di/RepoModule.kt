@@ -17,17 +17,13 @@ object RepoModule {
     @Provides
     fun providePostRepository(
         postApi: PostsApi,
-        postDao : PostDao
+        postDao: PostDao
     ): PostRepository {
         return PostRepository(
             postsApi = postApi,
             postDao = postDao
         )
     }
-
-
-
-
 
 }
 
