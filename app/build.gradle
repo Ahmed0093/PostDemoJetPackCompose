@@ -1,0 +1,124 @@
+import dependencies.*
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "com.example.postdemojetpackcompose"
+        minSdk 23
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        useIR = true
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        def kotlin_compiler_version = Versions.kotlin
+        kotlinCompilerVersion kotlin_compiler_version
+
+        def kotlin_compiler_extension_version = Versions.kotlin_compiler_extension
+        kotlinCompilerExtensionVersion kotlin_compiler_extension_version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+//    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07'
+
+    implementation AndroidX.core_ktx
+    implementation AndroidX.app_compat
+    implementation AndroidX.constraint_layout
+    implementation AndroidX.ui_tooling
+
+    implementation AndroidX.compose_ui
+    implementation AndroidX.compose_ui_tooling_preview
+    implementation AndroidX.compose_foundation
+    implementation AndroidX.compose_material
+    implementation AndroidX.compose_icons_core
+    implementation AndroidX.compose_icons_extended
+    implementation AndroidX.constraint_compose
+
+    implementation AndroidX.navigation_compose
+    implementation AndroidX.compose_activity
+    implementation AndroidX.navigation_hilt
+    implementation AndroidX.room_runtime
+    implementation AndroidX.room_ktx
+    implementation AndroidX.datastore
+    implementation AndroidX.hilt_lifecycle_viewmodel
+    implementation Google.material
+    implementation Google.hilt_android
+    kapt AnnotationProcessing.hilt_compiler
+    kapt AnnotationProcessing.room_compiler
+
+    implementation Accompanist.coil
+    implementation Jetbrains.kotlin_stdlib
+
+    implementation Square.retrofit
+    implementation Square.retrofit_gson
+    implementation Square.okHttp
+    implementation Square.okHttpLogging
+
+    implementation Square.leak_canary
+
+    //Test
+    testImplementation UnitTest.coreTesting
+    testImplementation UnitTest.mockK
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1"
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+
+//    // TESTING
+//    testImplementation UnitTest.jupiter_api
+//    testRuntimeOnly UnitTest.jupiter_engine
+//
+//    // Mock web server
+//    testImplementation UnitTest.mock_web_server
+////    testImplementation UnitTest.okHttp // include this if you get issues
+
+    // compose testing
+    implementation InstrumentationTest.compose_ui
+
+//    implementation ("androidx.core:core-ktx:1.6.0")
+//    implementation 'androidx.appcompat:appcompat:1.3.1'
+//    implementation 'com.google.android.material:material:1.4.0'
+//    implementation "androidx.compose.ui:ui:$compose_version"
+//    implementation "androidx.compose.material:material:$compose_version"
+//    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+//    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+//    implementation 'androidx.activity:activity-compose:1.3.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+//    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+}
