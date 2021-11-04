@@ -10,7 +10,7 @@ object NetworkRoute {
 
     /**
      * Main and only one public fun in this class to invoke api calls safely granting error and exception handling.
-     * All the mapping stuff to return only success or error model is done here.
+     * All the mapping stuff to return only success or error model from done here.
      */
     suspend fun <T : Any> makeApiCall(
         call: suspend () -> Response<T>
