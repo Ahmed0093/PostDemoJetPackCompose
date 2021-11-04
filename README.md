@@ -24,7 +24,7 @@ Fetching data from the network and integrating persisted data in the database vi
 ### TODO
 - Add Ui Test For jetpackCompose
 - Improve the UI with compose Features with animation.
-- performance improvments.
+- performance improvments
 - [Github Actions](https://docs.github.com/en/actions/learn-github-actions)
 
 
